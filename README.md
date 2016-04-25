@@ -52,6 +52,9 @@ chartHandler.ChartConfig;
 ### Rendering
 ```js 
 // Defines the chart config data.
+// This example defines only one chart. 
+// You may define an array of chartConfig and pass to 
+// chartHandler.register(arrayChartConfig), for example.
 var chartConfig = {
   type: 'line',
   containerSelector: '#chart',
