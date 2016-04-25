@@ -6,7 +6,7 @@
 The most basic features are present at this point.
 
 ## Dependency
-By default, chartHandler was forced to load automatically Google charts library to work as well. We recommend that you define manually this. Please, visit the Google charts website and see how include their script in your page.
+By default, chartHandler was forced to load automatically Google charts library to work as well. We recommend that you define manually this. Please, visit the [Google charts website](https://developers.google.com/chart/) and see how include their script in your page.
 
 ## Include JS files
 ```html
@@ -99,7 +99,7 @@ var chartElement = document.querySelector('#chart');
 chartElement.Chart.options.width = 600;
 
 // Adding a new row.
-chartElement.Chart.data.addRow([3, 25.4, 57, 25.7]);
+chartElement.Chart.data.addRow([4, 25.4, 57, 25.7]);
 
 // Upgrade the charts to apply the changes.
 chartHandler.upgradeAll();

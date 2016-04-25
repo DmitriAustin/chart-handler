@@ -536,4 +536,4 @@ window['chartHandler'] = chartHandler;
 
 window.addEventListener('load', function () {
   chartHandler.init();
-})
+});
