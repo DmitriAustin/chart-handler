@@ -1,0 +1,91 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>chartHandler.js</title>
+  <script src="//www.gstatic.com/charts/loader.js"></script>
+  <script src="../src/chartHandler.js"></script>
+</head>
+
+<body>
+  <section id="section-chart-static">
+    <h1>Static chart load</h1>
+    <div id="chart-static"></div>
+    <div style="width: 300px;" id="chart-static-2"></div>
+  </section>
+
+  <!-- script -->
+  <script>
+    (function () {
+      var dataCharts = [
+        {
+          type: 'line',
+          containerSelector: '#chart-static',
+          options: {
+            chart: {
+              title: 'Box Office Earnings in First Two Weeks of Opening',
+              subtitle: 'in millions of dollars (USD)'
+            },
+            width: 900,
+            height: 500
+          },
+          dataTable: {
+            columns: {
+              'Col 1': 'number',
+              'Col 2': 'number',
+              'Col 3': 'number',
+              'Col 4': 'number',
+            },
+            rows: [
+              [1, 37.8, 80.8, 41.8],
+              [2, 30.9, 69.5, 32.4],
+              [3, 25.4, 57, 25.7],
+              [4, 11.7, 18.8, 10.5],
+              [5, 11.9, 17.6, 10.4],
+              [6, 8.8, 13.6, 7.7],
+              [7, 7.6, 12.3, 9.6],
+              [8, 12.3, 29.2, 10.6],                          
+            ],
+          }
+        },
+        {
+          type: 'bar',
+          containerSelector: '#chart-static-2',
+          options: {
+            chart: {
+              title: 'Box Office Earnings in First Two Weeks of Opening',
+              subtitle: 'in millions of dollars (USD)'
+            },
+            // width: 900,
+            // height: 500
+          },
+          dataTable: {
+            columns: {
+              'Col 1': 'number',
+              'Col 2': 'number',
+              'Col 3': 'number',
+              'Col 4': 'number',
+            },
+            rows: [
+              [1, 37.8, 80.8, 41.8],
+              [2, 30.9, 69.5, 32.4],
+              [3, 25.4, 57, 25.7],
+              [4, 11.7, 18.8, 10.5],
+              [5, 11.9, 17.6, 10.4],
+              [6, 8.8, 13.6, 7.7],
+              [7, 7.6, 12.3, 9.6],
+              [8, 12.3, 29.2, 10.6],                          
+            ],
+          }
+        },
+      ];
+      
+      // Registering all data on chart handler.
+      chartHandler.register(dataCharts);
+      // Render all charts on screen.      
+      chartHandler.renderAll(); 
+    })();
+  </script>
+</body>
+
+</html>
