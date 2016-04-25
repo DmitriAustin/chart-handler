@@ -42,6 +42,21 @@ var chartHandler = {
   upgradeAll: function () { },
 
   /**
+   * Returns the array with all registereds charts.
+   * 
+   * @return {array}
+   */
+  getRegistereds: function () { },
+
+
+  /**
+   * Returns the array with all rendereds charts.
+   * 
+   * @return {array}
+   */
+  getRendereds: function () { },
+
+  /**
    * Initializes the basics of module.
    * 
    */
@@ -480,6 +495,25 @@ chartHandler = (function () {
   };
 
   /**
+   * Returns the array with all registereds charts.
+   * 
+   * @return {array}
+   */
+  var _getRegistereds = function () {
+    return _registeredCharts;
+  };
+
+
+  /**
+   * Returns the array with all rendereds charts.
+   * 
+   * @return {array}
+   */
+  var _getRendereds = function () {
+    return _renderedCharts;
+  };
+
+  /**
    * Initializes the basics of module.
    * 
    */
@@ -501,6 +535,8 @@ chartHandler = (function () {
     renderAll: _renderAll,
     renderAllDiff: _renderAllDiff,
     upgradeAll: _upgradeAll,
+    getRegistereds: _getRegistereds,
+    getRendereds: _getRendereds,
     init: _init,
   };
 })();
